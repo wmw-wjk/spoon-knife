@@ -9,3 +9,5 @@ After forking this repository, you can make some changes to the project, and sub
 For some more information on how to fork a repository, [check out our guide, "Forking Projects""](http://guides.github.com/overviews/forking/). Thanks! :sparkling_heart:
 
 ## Ensinando a criar uma pull request para o curso de Git avançado na NearX
+
+## Associando uma issue a uma pull request
