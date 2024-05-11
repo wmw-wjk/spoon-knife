@@ -1,0 +1,10 @@
+version = 1
+
+[[analyzers]]
+name = "ruby"
+
+[[transformers]]
+name = "rubocop"
+
+[[transformers]]
+name = "standardrb"
