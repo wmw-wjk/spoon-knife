@@ -8,16 +8,17 @@
   <style>
     body {
       text-align: center;
-      background-color: royalblue;
+      background-color: rgb(42, 54, 90);
       color: white;
       margin-top: 50px;
     }
 
     form {
-      display: inline-block;
+      display: block;
       padding: 1em;
       border: 1px solid #ccc;
       border-radius: 1em;
+      margin-bottom: 80px;
     }
 
     ul {
@@ -28,12 +29,14 @@
 
     form li + li {
       margin-top: 1em;
+      
     }
 
     label {
       display: inline-block;
       min-width: 90px;
       text-align: right;
+      
     }
 
     input, textarea {
@@ -60,6 +63,13 @@
       margin-left: 0.5em;
     }
 
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    
   </style>
 
 </head>
@@ -87,6 +97,27 @@
       </li>
     </ul>
   </form>
+
+  <div>
+    <label for="price" id="slider-label">Choose a maximum house price:</label>
+    <input type="range" name="price" id="price" min="10000" max="500000" step="100" value="120000">
+    <output class="price-output" for="price"></output>
+  </div>
+  
+
+
+  <script>
+
+    const price = document.querySelector("#price");
+    const output = document.querySelector(".price-output");
+
+    output.textContent = price.value;
+
+    price.addEventListener("input", () => {
+      output.textContent = price.value;
+    });
+
+  </script>
 
 </body>
 
