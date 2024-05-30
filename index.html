@@ -1,20 +1,189 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Spoon-Knife</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+<style>
+  h1 {
+  margin-top: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+form {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 400px;
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+div + div {
+  margin-top: 1em;
+}
+
+label span {
+  display: inline-block;
+  text-align: right;
+}
+
+input,
+textarea {
+  font: 1em sans-serif;
+  width: 250px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  border: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+  resize: vertical;
+}
+
+/* radio ::before transform and transition */
+
+/* input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: red;
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
+
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+} */
+/* radio trans end */
+
+fieldset {
+  width: 250px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+button {
+  margin: 5px 0 0 0;
+}
+
+label {
+  position: relative;
+  display: inline-block;
+}
+
+p label {
+  width: 100%;
+}
+
+label em {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<img src="forkit.gif" id="octocat" alt="" />
+  <button><a href="./Contact.html">Contact</a></button>
+  <button><a href="./form2.html">Form-2</a></button>
+  <button><a href="./feedback.html">Feedback</a></button>
+  <button><a href="./validator.html">Validator-Form</a></button>
+  <button><a href="./bouncingball.html">Collider</a></button>
+  <button><a href="./form.html">Form</a></button>
+  <button><a href="./contact2.html">Weather Forcast</a></button>
 
-<!-- Feel free to change this text here -->
-<p>
-  Fork me? Fork you, @octocat!
-</p>
 
+  <form action="" method="post">
+    <h1>Payment Form</h1>
+    <p>Required fields are marked<strong><span aria-label="required">*</span></strong></p>
+
+    <section>
+      <h2>Contact Information</h2>
+      <fieldset>
+        <legend>Title</legend>
+        <ul>
+          <li>
+            <input type="radio" name="title" id="master" value="master">
+            <label for="master">Mr.</label>
+          </li>
+          <li>
+            <input type="radio" name="title" id="misses" value="misses">
+            <label for="misses">Mrs.</label>
+          </li>
+          <li>
+            <input type="radio" name="title" id="miss" value="miss">
+            <label for="miss">Ms.</label>
+          </li>
+        </ul>
+      </fieldset>
+      <p>
+        <label for="name"><span>Name: </span><strong><span aria-label="required">*</span></strong></label>
+        <input type="text" name="username" id="name" required>
+      </p>
+      <p>
+        <label for="mail"><span>Email:</span><strong><span aria-label="required">*</span></strong></label>
+        <input type="email" name="usermail" id="mail" required>
+      </p>
+      <p>
+        <label for="pwd"><span>Password: </span><strong><span aria-label="required">*</span></strong></label>
+        <input type="password" name="password" id="pwd" required>
+      </p>
+    </section>
+
+    <section>
+      <h2>Payment Information</h2>
+      <p>
+        <label for="card"><span>Card Typy:</span></label>
+        <select name="usercard" id="card">
+          <option value="visa">Visa</option>
+          <option value="mc">Mastercard</option>
+          <option value="amex">American Express</option>
+        </select>
+      </p>
+      <p>
+        <label for="number"><span>Card number:</span><strong><span aria-label="required">*</span></strong></label>
+        <input type="tel" name="cardnumber" id="number" required>
+      </p>
+      <p>
+        <label for="expiration"><span>Expiration date:</span><strong><span aria-label="required">*</span></strong></label>
+        <input type="text" name="expiration" id="expiration" required placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$"">
+      </p>
+    </section>
+
+    <section>
+      <p>
+        <button type="submit">Make Payment</button>
+      </p>
+    </section>
+  </form>
+  
 </body>
+
 </html>

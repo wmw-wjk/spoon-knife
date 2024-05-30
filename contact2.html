@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Number guessing game</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+      
+      .form input[type="number"] {
+        width: 200px;
+      }
+
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+      
+
+    /* Silly story generator */
+      body {
+        font-family: helvetica, sans-serif;
+        width: 350px;
+        margin-top: 20px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      div {
+        padding-bottom: 20px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        width: 150px;
+      }
+
+      p {
+        background: #ffc125;
+        color: #5e2612;
+        padding: 10px;
+        visibility: hidden;
+      }
+
+      button {
+        margin-bottom: 20px;
+      }
+    </style>
+
+    <script src="javascript.js" defer></script>
+  </head>
+
+  <body>
+
+    <button><a href="./index.html">Home</a></button>
+    <button> <a href="./Contact.html">Contact</a></button>
+
+    <!-- Search History Project HTML -->
+    <div class="output">
+      <input type="text" placeholder="Enter search term...">
+      <ul></ul>
+    </div>
+
+
+    <!-- Silly Story Generator -->
+    <div>
+      <label for="customname">Enter custom name:</label>
+      <input id="customname" type="text" placeholder="" />
+    </div>
+    <div>
+      <label for="us">US</label
+      ><input id="us" type="radio" name="ukus" value="us" checked />
+      <label for="uk">UK</label
+      ><input id="uk" type="radio" name="ukus" value="uk" />
+    </div>
+    <div>
+      <button class="randomize">Generate random story</button>
+    </div>
+    <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
+    <p class="story"></p>
+
+
+    <!-- Weather Forcast HTML -->
+    <label for="weather">Select the weather type today: </label>
+    <select id="weather">
+      <option value="">--Make a choice--</option>
+      <option value="sunny">Sunny</option>
+      <option value="rainy">Rainy</option>
+      <option value="snowing">Snowing</option>
+      <option value="overcast">Overcast</option>
+    </select>
+
+    <p></p>
+
+
+    <!-- Theme Color Pick HTML-->
+    <label for="theme">Select theme: </label>
+    <select id="theme">
+      <option value="white">White</option>
+      <option value="black">Black</option>
+    </select>
+
+    <h1>This is my website</h1>
+
+
+
+    <!-- Contact Number Search HTML -->
+    <label for="search">Search by contact name: </label>
+    <input id="search" type="text" />
+    <button>Search</button>
+
+    <p></p>
+
+
+        <!-- Keydown HTML -->
+    <label for="keydown">Pressdown Any Key</label>
+    <input type="text" id="textbox">
+    <div id="output"></div>
+
+    <h1>Number guessing game</h1>
+
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+
+    <div class="form">
+      <label for="guessField">Enter a guess: </label>
+      <input type="number" min="1" max="100" required id="guessField" class="guessField">
+      <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+
+    <!-- Shopping Product-Price-List Project -->
+    <div class="output">
+      <ul></ul>
+    </div>
+
+
+    
+
+    
+  <script>
+
+    // Keydown JS
+    
+    const textbox = document.querySelector('#textbox');
+    const output = document.querySelector(#output);
+
+    textbox.addEventListener('keydown', (event) => {
+      output.textContent = `You pressed "${event.key}"`;
+    });
+
+    // Contact Number Search JS
+    const contacts = [
+  "Chris:2232322",
+  "Sarah:3453456",
+  "Bill:7654322",
+  "Mary:9998769",
+  "Dianne:9384975",
+];
+const para = document.querySelector("p");
+const input = document.querySelector("input");
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", () => {
+  const searchName = input.value.toLowerCase();
+  input.value = "";
+  input.focus();
+  para.textContent = "";
+  for (const contact of contacts) {
+    const splitContact = contact.split(":");
+    if (splitContact[0].toLowerCase() === searchName) {
+      para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
+      break;
+    }
+  }
+  if (para.textContent === "") {
+    para.textContent = "Contact not found.";
+  }
+});
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const list = document.querySelector('.output ul');
+      list.innerHTML = '';
+      let total = 0;
+
+      const products = [
+        'Underpants:6.99',
+        'Socks:5.99',
+        'T-shirt:14.99',
+        'Trousers:31.99',
+        'Shoes:23.99'
+      ];
+
+      for (const product of products) {
+        const [name, priceString] = product.split(':');
+        const price = Number(priceString);
+
+        total += price;
+        const itemText = `${name} — $${price.toFixed(2)}`;
+
+        const listItem = document.createElement('li');
+        listItem.textContent = itemText;
+        list.appendChild(listItem);
+      }
+
+      const totalText = `Total: $${total.toFixed(2)}`;
+      const totalListItem = document.createElement('li');
+      totalListItem.textContent = totalText;
+      list.appendChild(totalListItem);
+    });
+
+
+    <!-- Search History Project JS -->
+    const list = document.querySelector('.output ul');
+    const searchInput = document.querySelector('.output input');
+    let searchTerms = [];
+
+searchInput.addEventListener('change', () => {
+  // number 1
+  searchTerms.unshift(searchInput.value);
+
+  // number 2
+  if (searchTerms.length > 5) {
+    searchTerms.pop(); 
+  }
+
+  list.innerHTML = '';
+
+  for (const term of searchTerms) {
+    const listItem = document.createElement('li');
+    listItem.textContent = term;
+    list.appendChild(listItem);
+  }
+});
+
+
+// Weather Forcast JS
+const select = document.querySelector("select");
+const para = document.querySelector("p");
+
+select.addEventListener("change", setWeather);
+
+function setWeather() {
+  const choice = select.value;
+
+  switch (choice) {
+    case "sunny":
+      para.textContent =
+        "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+      break;
+    case "rainy":
+      para.textContent =
+        "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+      break;
+    case "snowing":
+      para.textContent =
+        "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+      break;
+    case "overcast":
+      para.textContent =
+        "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+      break;
+    default:
+      para.textContent = "";
+  }
+}
+
+
+// Theme Color Pick JS
+const select = document.querySelector("select");
+const html = document.querySelector("html");
+document.body.style.padding = "10px";
+
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}
+
+select.addEventListener("change", () =>
+  select.value === "black"
+    ? update("black", "white")
+    : update("white", "black"),
+);
+
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validator-Form</title>
+
+<style>
+  form {
+    font: 1em sans-serif;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  p > label {
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  textarea, fieldset {
+    width: 100;
+    border: 1px solid #333;
+    box-sizing: border-box;
+  }
+
+  input:invalid {
+    box-shadow: 0 0 5px 1px red;
+  }
+
+  input:focus:invalid {
+    box-shadow: none;
+  }
+</style>
+</head>
+
+<body>
+  <button><a href="./index.html">Home</a></button>
+
+  <form action="">
+    <fieldset>
+      <legend>Do you have a driver's license?<Span aria-label="required">*</Span></legend>
+
+      <input type="radio" name="driver" id="driver1" value="yes" required>
+      <label for="driver1">Yes</label>
+
+      <input type="radio" name="driver" id="driver2" value="no" required>
+      <label for="driver2">No</label>
+    </fieldset>
+
+    <p>
+      <label for="age">How old are you?</label>
+      <input type="number" name="age" id="age" min="12" max="120" step="1" pattern="\d+">
+    </p>
+
+    <p>
+      <label for="fruit">What's your favorite fruit?<span aria-label="required">*</span></label>
+      <input type="text" name="fruit" id="fruit" list="l1" required pattern="[Bb]anana|[Cc]hery|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+      <datalist id="l1">
+        <option>Banana</option>
+        <option>Cherry</option>
+        <option>Apple</option>
+        <option>Strawberry</option>
+        <option>Lemon</option>
+        <option>Orange</option>
+      </datalist>
+    </p>
+
+    <p>
+      <label for="mail">What's your email address?</label>
+      <input type="email" name="email" id="mail">
+    </p>
+
+    <p>
+      <label for="msg">Leave s short message</label>
+      <textarea name="message" id="msg" cols="30" rows="10" maxlength="140"></textarea>
+    </p>
+
+    <p><button type="submit">Submit</button></p>
+  </form>
+</body>
+</html>
