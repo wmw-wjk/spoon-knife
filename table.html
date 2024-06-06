@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Format</title>
+
+  <style>
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 100%;
+    }
+    th,
+    td {
+      padding: 6px 15px;
+    }
+    th {
+      background: #42444e;
+      color: #fff;
+      text-align: left;
+    }
+    tr:first-child th:first-child {
+      border-top-left-radius: 6px;
+    }
+    tr:first-child th:last-child {
+      border-top-right-radius: 6px;
+    }
+    td {
+      border-right: 1px solid #c6c9cc;
+      border-bottom: 1px solid #c6c9cc;
+    }
+    td:first-child {
+      border-left: 1px solid #c6c9cc;
+    }
+    tr:nth-child(even) td {
+      background: #eaeaed;
+    }
+    tr:last-child td:first-child {
+      border-bottom-left-radius: 6px;
+    }
+    tr:last-child td:last-child {
+      border-bottom-right-radius: 6px;
+    }
+
+    /*  POSITIONING */
+    div {
+      box-sizing: border-box;
+      margin-top: 20px;
+      
+      
+    }
+    .box {
+      box-sizing: border-box;
+      width: 140px;
+      height: 140px;
+      border: 2px solid red;
+      background-color: lightblue;
+      display: inline-block;
+    }
+    #box5 {
+      position: sticky;
+      top: 20px;
+      background: gold;
+    }
+    table, dl[class="sectable"] {
+      margin-top: 40px;
+    }
+
+    /* Alphabetized List */
+    dl {
+      box-sizing: border-box;
+    }
+    dl>div {
+      background: grey;
+      padding: 24px 0 0 0;
+    }
+    dt {
+      background: #b8c1c8;
+      border: 1px solid #58616b;
+      font: bold 18px/21px Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 2px 0 0 28px;
+      position: sticky;
+      top: -1px;
+      
+    }
+
+  </style>
+</head>
+<body>
+  <button><a href="./index.html">Home</a></button>
+  <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Subject</th>
+      <th>Score</th>
+      <th>Grade</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rapheal Tomson</td>
+      <td>Mathematics</td>
+      <td>76</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Tunde Dina</td>
+      <td>Physics</td>
+      <td>72</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Akeem Ghandi</td>
+      <td>Chemistry</td>
+      <td>87</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Monday Lawson</td>
+      <td>English</td>
+      <td>65</td>
+      <td>B</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Joe Duru</td>
+      <td>Biology</td>
+      <td>89</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Lekan Salami</td>
+      <td>Agric. Science</td>
+      <td>90</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Emma Love</td>
+      <td>Biology</td>
+      <td>80</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Habeeb Gida</td>
+      <td>Biology</td>
+      <td>73</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Rukayat Abiola</td>
+      <td>English</td>
+      <td>68</td>
+      <td>B</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Shakira Damsi</td>
+      <td>Chemistry</td>
+      <td>88</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Timi Leexy</td>
+      <td>Biology</td>
+      <td>78</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Abana Sheu</td>
+      <td>Mathematics</td>
+      <td>94</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Joe Duru</td>
+      <td>Biology</td>
+      <td>89</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Jamiu Lawal</td>
+      <td>Literature</td>
+      <td>76</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Ibrahim Gambo</td>
+      <td>Tech. Drawing</td>
+      <td>85</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Aminu Suraj</td>
+      <td>Mathematics</td>
+      <td>94</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Rabiu Jiga</td>
+      <td>History</td>
+      <td>92</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Mahmood Kabir</td>
+      <td>Geograpgy</td>
+      <td>80</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    ...
+  </tbody>
+</table>
+
+<div></div>
+<div class="box" id="box1">Static</div>
+<div class="box" id="box2">Relative</div>
+<div class="box" id="box3">Absolute</div>
+<div class="box" id="box5">Sticky</div>
+<div class="box" id="box4">Fixed</div>
+
+<dl class="sectable">
+  <div>
+    <dt>A</dt>
+    <dd>Ant</dd>
+    <dd>Application</dd>
+    <dd>Andrew</dd>
+    <dd>Anthem</dd>
+    <dd>Antioch</dd>
+    <dd>Abode</dd>
+    <dd>Abdicate</dd>
+    <dd>Adjourn</dd>
+    <dd>Apart</dd>
+    <dd>Approximate</dd>
+    <dd>Antidisseminate</dd>
+    <dd>Azerman</dd>
+  </div>  
+  <div>
+    <dt>B</dt>
+    <dd>Basket</dd>
+    <dd>Baseball</dd>
+    <dd>Baseline</dd>
+    <dd>Balloon</dd>
+    <dd>Basefront</dd>
+    <dd>Block</dd>
+    <dd>Blasphemy</dd>
+    <dd>Border</dd>
+    <dd>Bottom</dd>
+    <dd>Building</dd>
+    <dd>Boredom</dd>
+    <dd>Busta-ryhme</dd>
+  </div>
+  <div>
+    <dt>C</dt>
+    <dd>Cat</dd>
+    <dd>Chair</dd>
+    <dd>Choir</dd>
+    <dd>Corridor</dd>
+    <dd>Cattarh</dd>
+    <dd>Cardiovascular</dd>
+    <dd>Candidate</dd>
+    <dd>Canvas</dd>
+    <dd>Caption</dd>
+    <dd>Captain</dd>
+    <dd>Camelion</dd>
+    <dd>Cameroon</dd>
+  </div>
+  <div>
+    <dt>D</dt>
+    <dd>Desk</dd>
+    <dd>Duplicate</dd>
+    <dd>Despirate</dd>
+    <dd>Deathrow</dd>
+    <dd>Destalker</dd>
+    <dd>Dangerous</dd>
+    <dd>Duster</dd>
+    <dd>Detail</dd>
+    <dd>Datalog</dd>
+    <dd>Document</dd>
+    <dd>Delete</dd>
+    <dd>Determinate</dd>
+  </div>
+</dl>
+
+<table class="sectable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Subject</th>
+      <th>Score</th>
+      <th>Grade</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rapheal Tomson</td>
+      <td>Mathematics</td>
+      <td>76</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Tunde Dina</td>
+      <td>Physics</td>
+      <td>72</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Akeem Ghandi</td>
+      <td>Chemistry</td>
+      <td>87</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Monday Lawson</td>
+      <td>English</td>
+      <td>65</td>
+      <td>B</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Joe Duru</td>
+      <td>Biology</td>
+      <td>89</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Lekan Salami</td>
+      <td>Agric. Science</td>
+      <td>90</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Emma Love</td>
+      <td>Biology</td>
+      <td>80</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Habeeb Gida</td>
+      <td>Biology</td>
+      <td>73</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Rukayat Abiola</td>
+      <td>English</td>
+      <td>68</td>
+      <td>B</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Shakira Damsi</td>
+      <td>Chemistry</td>
+      <td>88</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Timi Leexy</td>
+      <td>Biology</td>
+      <td>78</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Abana Sheu</td>
+      <td>Mathematics</td>
+      <td>94</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Joe Duru</td>
+      <td>Biology</td>
+      <td>89</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Jamiu Lawal</td>
+      <td>Literature</td>
+      <td>76</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Ibrahim Gambo</td>
+      <td>Tech. Drawing</td>
+      <td>85</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Aminu Suraj</td>
+      <td>Mathematics</td>
+      <td>94</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Rabiu Jiga</td>
+      <td>History</td>
+      <td>92</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Mahmood Kabir</td>
+      <td>Geograpgy</td>
+      <td>80</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    ...
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Subject</th>
+      <th>Score</th>
+      <th>Grade</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rapheal Tomson</td>
+      <td>Mathematics</td>
+      <td>76</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Tunde Dina</td>
+      <td>Physics</td>
+      <td>72</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Akeem Ghandi</td>
+      <td>Chemistry</td>
+      <td>87</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Monday Lawson</td>
+      <td>English</td>
+      <td>65</td>
+      <td>B</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Joe Duru</td>
+      <td>Biology</td>
+      <td>89</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Lekan Salami</td>
+      <td>Agric. Science</td>
+      <td>90</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Emma Love</td>
+      <td>Biology</td>
+      <td>80</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Habeeb Gida</td>
+      <td>Biology</td>
+      <td>73</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Rukayat Abiola</td>
+      <td>English</td>
+      <td>68</td>
+      <td>B</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Shakira Damsi</td>
+      <td>Chemistry</td>
+      <td>88</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Timi Leexy</td>
+      <td>Biology</td>
+      <td>78</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Abana Sheu</td>
+      <td>Mathematics</td>
+      <td>94</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Joe Duru</td>
+      <td>Biology</td>
+      <td>89</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Jamiu Lawal</td>
+      <td>Literature</td>
+      <td>76</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Ibrahim Gambo</td>
+      <td>Tech. Drawing</td>
+      <td>85</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Aminu Suraj</td>
+      <td>Mathematics</td>
+      <td>94</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Rabiu Jiga</td>
+      <td>History</td>
+      <td>92</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    <tr>
+      <td>Mahmood Kabir</td>
+      <td>Geograpgy</td>
+      <td>80</td>
+      <td>A</td>
+      <td>#</td>
+    </tr>
+    ...
+  </tbody>
+</table>
+
+
+</body>
+</html>
