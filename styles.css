@@ -15,8 +15,9 @@ p {
   margin: 50px auto;
   font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
 }
-img{
-  width:1600px;
+#logo {
+  display: block;
+  width:160px;
   height: 160px;
   margin: auto;
   border-radius: 50%;
