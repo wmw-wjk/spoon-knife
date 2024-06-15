@@ -1,11 +1,18 @@
 * {
-  margin:0px;
-  padding:0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100vh;
+  color: #fefefe;
+  background-color: #1e1c19;
+  font: 30px Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 }
 
 #octocat {
   display: block;
-  width:384px;
+  width: 384px;
   margin: 50px auto;
 }
 
@@ -13,5 +20,36 @@ p {
   display: block;
   width: 400px;
   margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+}
+
+#logo {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: 10px auto;
+  border-radius: 50%;
+}
+
+h1 {
+  width: 400px;
+  margin: 30px auto;
+  font-size: larger;
+  text-align: center;
+  color: #fff;
+}
+
+ul {
+  width: 500px;
+  margin: auto;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f4f4f414;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: medium;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
