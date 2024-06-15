@@ -19,6 +19,6 @@ p {
   display: block;
   width:160px;
   height: 160px;
-  margin: auto;
+  margin: 10px auto;
   border-radius: 50%;
 }
