@@ -9,9 +9,22 @@
   margin: 50px auto;
 }
 
+#container {
+  display: flex;
+  background-color: darkblue;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  border: 10px solid orange;
+  border-bottom-color: darkorange;
+  border-right-color: darkorange;
+
+}
+
 p {
   display: block;
-  width: 400px;
+  width: auto;
   margin: 50px auto;
   font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  color: white;
+  font-weight: bold;
 }
